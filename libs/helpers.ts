@@ -4,7 +4,7 @@ export const getUrl = () => {
   let url =
     process.env.NEXT_PUBLIC_SITE_URL ??
     process.env.NEXT_PUBLIC_VERCEL_URL ??
-    "http://localhost:3000";
+    "http://localhost:3000/";
 
   url = url.includes("http") ? url : `https://${url}`;
   url = url.charAt(url.length - 1) === "/" ? url : `${url}/`;
@@ -24,7 +24,7 @@ export const postData = async ({
   const res: Response = await fetch(url, {
     method: "POST",
     headers: new Headers({
-      "content-type": "application/json",
+      "Content-Type": "application/json",
     }),
     credentials: "same-origin",
     body: JSON.stringify(data),

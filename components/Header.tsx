@@ -3,7 +3,6 @@
 import { useRouter } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
-import { HiHome } from "react-icons/Hi";
 import { BiSearch } from "react-icons/bi";
 import Button from "./Button";
 import useAuthModal from "@/hooks/useAuthModal";
@@ -12,6 +11,7 @@ import { useUser } from "@/hooks/useUser";
 import { FaUserAlt } from "react-icons/fa";
 import toast from "react-hot-toast";
 import usePlayer from "@/hooks/usePlayer";
+import { HiHome } from "react-icons/hi";
 
 interface HeaderProps {
   children: React.ReactNode;
